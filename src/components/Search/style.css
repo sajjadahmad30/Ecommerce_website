@@ -1,0 +1,4 @@
+.searchBox input::placeholder {
+  color: #373737;
+  padding-left: 10px;
+}
