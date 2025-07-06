@@ -72,6 +72,27 @@ nav ul button:hover {
   font-size: 22px !important;
 }
 
+.smlBtn .swiper-button-prev,
+.smlBtn .swiper-button-next {
+  width: 30px !important;
+  height: 30px !important;
+  min-width: 30px !important;
+  top: 50% !important;
+}
+.smlBtn .swiper-button-prev:hover {
+  background: #ff5252 !important;
+  color: #fff !important;
+}
+.smlBtn .swiper-button-prev:hover::after {
+  color: white !important;
+}
+.smlBtn .swiper-button-next:hover {
+  background: #ff5252 !important;
+}
+.smlBtn .swiper-button-next:hover::after {
+  color: white !important;
+}
+
 .homeCatSlider .swiper-button-prev {
   width: 30px;
   height: 30px;

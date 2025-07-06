@@ -2,6 +2,7 @@ import React from 'react'
 import HomeSlider from '../../Pages/Home'
 import HomeCatSlider from '../HomeCatSlider/HomeCatSlider'
 import { FaShippingFast } from "react-icons/fa";
+import AdsBannerSlider from '../AdsBannerSlider';
 
 const Home = () => {
   return (
@@ -11,7 +12,7 @@ const Home = () => {
 
      <section className='!py-16 !bg-white !mt-5'>
       <div className="container">
-        <div className="freeShipping border-2 border-[#ff5252] !px-3 !p-4 w-full flex items-center justify-between rounded-md">
+        <div className="freeShipping border-2 border-[#ff5252] !px-3 !p-4 w-full flex items-center justify-between rounded-md !mb-7">
         
          <div className="col1  flex items-center gap-4">
          <FaShippingFast className='text-[50px]'/>
@@ -27,6 +28,9 @@ const Home = () => {
           </div>
 
         </div>
+
+        {/* AdsBannerSlider imported here */}
+        <AdsBannerSlider items={4}/>
       </div>
      </section>
      <br /><br /><br /><br />
