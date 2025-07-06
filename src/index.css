@@ -14,6 +14,17 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 10px !important;
+  height: 10px !important;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff5252;
+}
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
 .container {
   width: 95%;
   margin: auto;
@@ -59,4 +70,45 @@ nav ul button:hover {
 .swiper-button-next:after {
   color: #000 !important;
   font-size: 22px !important;
+}
+
+.homeCatSlider .swiper-button-prev {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+}
+.homeCatSlider .swiper-button-prev:hover {
+  background: #ff5252 !important;
+}
+.homeCatSlider .swiper-button-prev:hover::after {
+  color: #fff !important;
+}
+.homeCatSlider .swiper-button-prev:after {
+  font-size: 18px !important;
+}
+.homeCatSlider .swiper-button-next {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+}
+.homeCatSlider .swiper-button-next:hover {
+  background: #ff5252 !important;
+  color: #fff !important;
+}
+.homeCatSlider .swiper-button-next:after {
+  font-size: 18px !important;
+}
+.homeCatSlider .swiper-button-next:hover::after {
+  color: #fff !important;
+}
+.homeCatSlider .item {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.homeCatSlider .item img {
+  transition: all 0.3s ease-in-out;
+}
+
+.homeCatSlider .item:hover img {
+  transform: scale(1.1);
 }
