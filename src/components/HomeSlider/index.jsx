@@ -6,8 +6,19 @@ import AdsBannerSlider from '../AdsBannerSlider';
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
 import ProductsSlider from '../ProductsSlider';
+import BlogItem from '../BlogItem';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Navigation module only
+import { Navigation } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import Footer from '../Footer';
+
 
 const Home = () => {
   const [value, setValue] = useState(0);
@@ -81,7 +92,64 @@ const Home = () => {
       </div>
      </section>
 
-     <br /><br /><br /><br />
+
+    <section className='!py-5 bg-white !pt-0'>
+      <div className="container">
+      <h2 className='text-[22px] font-[600]'>Latest Products</h2>
+        <ProductsSlider items={6}/>
+
+        <AdsBannerSlider items={2} />
+      </div>
+    </section>
+
+
+    <section className='!py-5 bg-white !pt-0'>
+      <div className="container">
+      <h2 className='text-[22px] font-[600]'>Future Products</h2>
+        <ProductsSlider items={6}/>
+
+        <AdsBannerSlider items={3} />
+      </div>
+    </section>
+
+
+    <section className='blogSection !py-5 !pb-8 !pt-0 bg-white'>
+      <div className="container">
+        <h3 className='!text-[20px] !font-[600]  !mb-4'>From the Blog</h3>
+      <Swiper
+      modules={[Navigation]}     
+      navigation                  
+      spaceBetween={30}
+      slidesPerView={4}
+    >
+      <SwiperSlide>
+        <BlogItem/>
+      </SwiperSlide>
+      <SwiperSlide>
+        <BlogItem/>
+      </SwiperSlide>
+      <SwiperSlide>
+        <BlogItem/>
+      </SwiperSlide>
+      <SwiperSlide>
+        <BlogItem/>
+      </SwiperSlide>
+      <SwiperSlide>
+        <BlogItem/>
+      </SwiperSlide>
+      <SwiperSlide>
+        <BlogItem/>
+      </SwiperSlide>
+      <SwiperSlide>
+        <BlogItem/>
+      </SwiperSlide>
+    </Swiper>
+      </div>
+    </section>
+
+
+    <Footer/>
+
     </div>
   )
 }
