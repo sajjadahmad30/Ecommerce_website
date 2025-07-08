@@ -22,6 +22,7 @@ import HomeSliderV2 from '../HomeSliderV2';
 import BannerBoxV2 from '../BannerBoxV2';
 import BannerBoxV2Img1 from "../../assets/images/BannerBoxV2Img.jpg"
 import BannerBoxV2Img2 from "../../assets/images/BannerBoxV2Img2.jpg"
+import AdsBannerSliderV2 from '../AdsBannerSliderV2';
 
 const Home = () => {
   const [value, setValue] = useState(0);
@@ -107,7 +108,7 @@ const Home = () => {
         </div>
 
         {/* AdsBannerSlider imported here */}
-        <AdsBannerSlider items={4}/>
+        <AdsBannerSliderV2 items={4}/>
       </div>
      </section>
 
@@ -167,7 +168,6 @@ const Home = () => {
     </section>
 
 
-    <Footer/>
 
     </>
   )

@@ -199,3 +199,11 @@ nav ul button:hover {
 .homeSliderV2 .info .btn_ {
   transition-duration: 1.9s !important;
 }
+
+.MuiCheckbox-root {
+  padding: 6px !important;
+}
+
+.ReactCollapse--collapse {
+  transition: height 400ms !important;
+}
