@@ -19,7 +19,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import Footer from '../Footer';
 import HomeSliderV2 from '../HomeSliderV2';
-
+import BannerBoxV2 from '../BannerBoxV2';
+import BannerBoxV2Img1 from "../../assets/images/BannerBoxV2Img.jpg"
+import BannerBoxV2Img2 from "../../assets/images/BannerBoxV2Img2.jpg"
 
 const Home = () => {
   const [value, setValue] = useState(0);
@@ -31,10 +33,16 @@ const Home = () => {
     <>
      {/* <HomeSlider/> */}
 
+     {/*HomeSlider can use or HomeSliderV2 or used both or very good.  */}
+
     <section className='!py-6'>
-      <div className="container flex items-center">
-        <div className="part1 w-[75%]">
-          <HomeSliderV2/>
+      <div className="container flex !gap-5">
+        <div className="part1 w-[70%]">
+          <HomeSliderV2 />
+        </div>
+        <div className="part2 w-[30%] flex items-center justify-between flex-col gap-5">
+          <BannerBoxV2 info="left" image={BannerBoxV2Img1} />
+          <BannerBoxV2 info="right" image={BannerBoxV2Img2} />
         </div>
       </div>
     </section>
