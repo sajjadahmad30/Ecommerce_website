@@ -100,8 +100,6 @@ const SideBar = () => {
             </div>
         </div>
 
-
-        
     </aside>
   )
 }

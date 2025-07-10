@@ -153,6 +153,9 @@ nav ul button:hover {
   font-weight: 500 !important;
   font-size: 16px !important;
 }
+.btn-org:hover {
+  background: #171717 !important;
+}
 
 .MuiFormControlLabel-label {
   font-size: 13px !important;
@@ -206,4 +209,14 @@ nav ul button:hover {
 
 .ReactCollapse--collapse {
   transition: height 400ms !important;
+}
+
+.itemViewActions button.active {
+  background: #bb9999 !important;
+  opacity: 1 !important;
+}
+
+.Mui-selected.MuiPaginationItem-page {
+  background: #ff5252 !important;
+  color: #fff !important;
 }
