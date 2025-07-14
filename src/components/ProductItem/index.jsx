@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "../ProductItem/style.css"
 import man11 from "../../assets/images/fashionImages/fourthWomen1.jpg"
 import man1 from "../../assets/images/fashionImages/fourthWomen2.jpg"
@@ -9,8 +9,10 @@ import { IoGitCompareOutline } from 'react-icons/io5'
 import { MdZoomOutMap } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 import Tooltip from '@mui/material/Tooltip';
+import { MyContext } from '../../App'
 
 const ProductItem = () => {
+   const context = useContext(MyContext);
   return (
     <div className='productItem shadow-lg rounded-md overflow-hidden border-1 border-[rgba(0,0,0,0.1)] '>
         <div className="group imgWrapper w-[100%]  overflow-hidden rounded-md relative">
@@ -25,7 +27,7 @@ const ProductItem = () => {
           
           <div className="actions !absolute top-[-200px] !right-[5px] z-50 flex items-center !gap-4 !flex-col w-[50px] transition-all duration-300 group-hover:top-[15px] opacity-0 group-hover:opacity-100">
           <Tooltip title="View Product Details" placement="left-start">
-            <Button className='!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !text-black !bg-white hover:!bg-[#ff5252] hover:!text-white group'>
+            <Button className='!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !text-black !bg-white hover:!bg-[#ff5252] hover:!text-white group' onClick={()=> context.setOpenProductDetailModel(true)}>
                <MdZoomOutMap className='!text-black text-[18px] group-hover:text-white hover:!text-white'/>
             </Button>
             </Tooltip>

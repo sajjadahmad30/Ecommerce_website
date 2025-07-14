@@ -34,8 +34,8 @@ const ProductListing = () => {
         <Link
           underline="hover"
           color="inherit"
-          href="/"
           className='link transition'
+          href="/ "
         >
           Fashion
         </Link>
