@@ -162,6 +162,10 @@ nav ul button:hover {
 .btn-org:hover {
   background: #171717 !important;
 }
+.btn-lg {
+  padding: 10px 20px !important;
+  font-size: 18px !important;
+}
 
 .MuiFormControlLabel-label {
   font-size: 13px !important;

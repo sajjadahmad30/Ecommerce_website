@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { IoMdEye, IoMdEyeOff } from 'react-icons/io';
+import { Link } from 'react-router-dom';
+import {FcGoogle} from 'react-icons/fc';
 
 
 const Login = () => {
@@ -9,7 +11,7 @@ const Login = () => {
   return (
     <section className='section !py-10'>
         <div className="container">
-            <div className="card shadow-md w-[500px] !m-auto !rounded-md bg-white !p-5 !px-10">
+            <div className="card shadow-md w-[400px] !m-auto !rounded-md bg-white !p-5 !px-10">
                 <h3 className='!text-[18px] !text-black !font-[600] !text-center'>Login to your account</h3>
 
                 <form action="" className='w-full !mt-5'>
@@ -25,6 +27,23 @@ const Login = () => {
                             }
                             </Button>
                     </div>
+
+                    
+                    <a className='link text-[14px] cursor-pointer font-[600]'>Forgot Password?</a>
+
+
+                    <div className="flex items-center w-full !mt-3 !mb-3">
+                        <Button className='btn-org btn-lg w-full'>Login</Button>
+                    </div>
+
+                    <p className='text-center'>Not Registered? <Link className='link text-[14px] font-[600] !text-[#ff5252]' to="/register">Sign Up</Link></p>
+
+                    <p className='text-center !font-[500]'>Or Continue with social account</p>
+
+                    <Button className='flex gap-2 w-full !bg-[#f1f1f1] btn-lg !text-black'>
+                        <FcGoogle className='!text-[20px]'/> Login with Google
+                    </Button>
+
                 </form>
             </div>
         </div>
