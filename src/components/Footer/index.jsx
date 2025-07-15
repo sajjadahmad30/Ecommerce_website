@@ -14,7 +14,17 @@ import visaImage from "../../assets/images/paymentCard/visa.jpg"
 import AmazonImage from "../../assets/images/paymentCard/amazon.jpg"
 import bicoinImage from "../../assets/images/paymentCard/bitcoin.jpg"
 
+
+import Drawer from '@mui/material/Drawer';
+import { IoCloseSharp } from 'react-icons/io5'
+import imageWomen1 from "../../assets/images/fashionImages/secondWomen1.jpg"
+import CartPanel from '../../components/CartPanel/index'
+import { useContext } from 'react'
+import { MyContext } from '../../App'
+
 const Footer = () => {
+    
+    const context = useContext(MyContext);
   return (
   <>
     <footer className='!py-6 bg-[#fafafa]'>
@@ -135,6 +145,21 @@ const Footer = () => {
             </div>
         </div>
     </div>
+
+
+    <Drawer 
+        open={context.openCartPanel} 
+        onClose={context.toggleCartPanel(false)} 
+        anchor='right'
+        className=' cartPanel'
+        >
+         <div className="flex items-center justify-between !py-3 !px-4 gap-3 border-b border-[rgba(0,0,0,0.1)]">
+           <h4 className='font-[600]'>Shopping Cart(1) </h4><IoCloseSharp onClick={context.toggleCartPanel(false)} className='text-[20px] cursor-pointer'/>
+         </div>
+
+        <CartPanel/>
+         
+      </Drawer>
   </>
   )
 }

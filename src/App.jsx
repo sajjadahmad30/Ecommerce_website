@@ -5,6 +5,7 @@ import Home from './components/HomeSlider'
 import ProductListing from './Pages/ProductListing'
 import Footer from './components/Footer'
 import ProductDetails from './Pages/ProductDetails'
+
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
@@ -12,6 +13,8 @@ import ProductZoom from './components/ProductZoom'
 import { MdClose } from 'react-icons/md'
 import ProductDetailsComponent from './components/ProductDetails'
 import Login from './Pages/Login'
+import Register from './Pages/Register'
+
 
 const MyContext = createContext();
 
@@ -20,13 +23,23 @@ const App = () => {
    const [maxWidth, setMaxWidth] = useState('lg');
    const [fullWidth, setFullWidth] = useState(true);
 
+   const [openCartPanel, setOpenCartPanel] = useState(false);
+
   const handleCloseProductDetailModel = () => {
     setOpenProductDetailModel(false);
   };
 
 
+  const toggleCartPanel = (newOpen) =>()=>{
+      setOpenCartPanel(newOpen);
+  }
+
+
   const values= {
-    setOpenProductDetailModel
+    setOpenProductDetailModel,
+    setOpenCartPanel,
+    toggleCartPanel,
+    openCartPanel
   }
 
   return (
@@ -39,6 +52,7 @@ const App = () => {
                 <Route path='/productListing' exact={true} element={<ProductListing/>}/>
                 <Route path='/productDetails/:id' exact={true} element={<ProductDetails/>}/>
                 <Route path='/login' exact={true} element={<Login/>}/>
+                <Route path='/register' exact={true} element={<Register/>}/>
             </Routes>
             <Footer/>
           </MyContext.Provider>
@@ -67,6 +81,9 @@ const App = () => {
           </div>
         </DialogContent>
       </Dialog>
+
+
+        
     </>
   )
 }
