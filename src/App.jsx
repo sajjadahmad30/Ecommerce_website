@@ -14,6 +14,7 @@ import { MdClose } from 'react-icons/md'
 import ProductDetailsComponent from './components/ProductDetails'
 import Login from './Pages/Login'
 import Register from './Pages/Register'
+import CartPage from './Pages/Cart'
 
 
 const MyContext = createContext();
@@ -53,6 +54,7 @@ const App = () => {
                 <Route path='/productDetails/:id' exact={true} element={<ProductDetails/>}/>
                 <Route path='/login' exact={true} element={<Login/>}/>
                 <Route path='/register' exact={true} element={<Register/>}/>
+                <Route path='/cart' exact={true} element={<CartPage/>}/>
             </Routes>
             <Footer/>
           </MyContext.Provider>

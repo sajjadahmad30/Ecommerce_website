@@ -295,3 +295,6 @@ input[type="number"]::-webkit-inner-spin-button {
 .cartPanel .MuiPaper-root {
   width: 400px;
 }
+#size-menu .MuiButtonBase-root {
+  font-size: 12px !important;
+}
