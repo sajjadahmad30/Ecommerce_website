@@ -15,7 +15,6 @@ import Button from '@mui/material/Button';
 
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import Divider from '@mui/material/Divider';
 import { IoIosLogOut, IoMdHeartEmpty } from 'react-icons/io';
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -135,22 +134,22 @@ const Header = () => {
             >
               <Link to="my-account" className='w-full block'>
               <MenuItem onClick={handleClose} className='flex gap-2 !py-2'>
-                <FaRegUser className='text-[18px]'/><span   className='text-[14px]'> My Account</span>
+                <FaRegUser className='text-[18px]'/><Link to="/my-account"   className='text-[14px]'> My Account</Link>
               </MenuItem>
               </Link>
               <Link>
               <MenuItem onClick={handleClose} className='fle gap-2'>
-                <IoBagCheckOutline className='text-[18px]'/><span   className='text-[14px]'> Orders</span>
+                <IoBagCheckOutline className='text-[18px]'/><Link to="/orders"   className='text-[14px]'> Orders</Link>
               </MenuItem>
               </Link>
               <Link>
               <MenuItem onClick={handleClose} className='flex gap-2 !py-2'>
-                <IoMdHeartEmpty className='text-[18px]'/><span   className='text-[14px]'> My List</span>
+                <IoMdHeartEmpty className='text-[18px]'/><Link to="/my-list" className='text-[14px]'> My List</Link>
               </MenuItem>
               </Link>
               <Link>
               <MenuItem onClick={handleClose} className='flex gap-2 !py-2'>
-                <IoIosLogOut  className='text-[18px]'/><span  className='text-[14px]'> Logout</span>
+                <IoIosLogOut  className='text-[18px]'/><Link to="/logout"  className='text-[14px]'> Logout</Link>
               </MenuItem>
               </Link>
             </Menu>
