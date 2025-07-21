@@ -37,6 +37,9 @@ p {
 .scroll::-webkit-scrollbar-thumb {
   background: #ccc;
 }
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
 
 .container {
   width: 95%;

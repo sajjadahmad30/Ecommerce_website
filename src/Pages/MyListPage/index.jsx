@@ -28,7 +28,7 @@ const MyListPage = () => {
                 </div>
             </div>
         </div>
-    </section>
+     </section>
 
 
   )

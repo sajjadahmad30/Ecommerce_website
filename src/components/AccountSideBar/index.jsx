@@ -35,7 +35,7 @@ const AccountSideBar = () => {
                                </NavLink>
                            </li>
                            <li className='w-full'>
-                               <NavLink to="/my-orders" exact={true} activeClassName="isActive">
+                               <NavLink to="/orders" exact={true} activeClassName="isActive">
                                <Button className='flex !px-5 !py-2 !capitalize !text-[rgba(0,0,0,0.8)] gap-2 !text-left   !justify-start w-full !rounded-none' ><IoBagCheckOutline className='!text-[15px]'/> My Orders</Button>
                                </NavLink>
                            </li>
